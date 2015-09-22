@@ -8,9 +8,3 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
-// Good morning the world!
-require ('../protected/wekit.php');
-$config = include '../protected/Config/web.php';
-$application = new Leaps\Web\Application ( $config );
-$application->run ();
-
