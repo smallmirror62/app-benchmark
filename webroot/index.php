@@ -10,7 +10,10 @@
 // +----------------------------------------------------------------------
 // Good morning the world!
 require ('../protected/wekit.php');
-$config = include '../protected/Config/web.php';
-$application = new Leaps\Web\Application ( $config );
-$application->run ();
+
+$app = new Wekit();
+$app->run();
+//$config = include '../protected/Config/web.php';
+//$application = new Leaps\Web\Application ( $config );
+//$application->run ();
 

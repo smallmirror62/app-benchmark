@@ -32,16 +32,19 @@ spl_autoload_register ( [ '\Leaps\Kernel','autoload' ], true, true );
 
 class Wekit{
 
+	public $config;
+	public $app;
+
 	/**
 	 * 构造方法
 	 */
 	public function __construct(){
-
-
-
+		//$this->app = new Leaps\Web\App();
+		echo '初始化应用程序';
 	}
 
 	public function run(){
-
+		//$thos->app->run();
+		echo '执行应用程序';
 	}
 }
