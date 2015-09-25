@@ -29,6 +29,11 @@ spl_autoload_register ( [ '\Leaps\Kernel','autoload' ], true, true );
 */
 \Leaps\Kernel::$env = (isset ( $_SERVER ['LEAPS_ENV'] ) ? $_SERVER ['LEAPS_ENV'] : Leaps\Kernel::DEVELOPMENT);
 
+$di = \Leaps\Kernel::getDi();
+$di->set('Crypt','\Leaps\Crypt\Crypt');
+$crypt = $di->get('Crypt');
+print_r($crypt);
+exit;
 
 class Wekit{
 

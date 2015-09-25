@@ -29,5 +29,9 @@
   },
   "config": {
 	  "vendor-dir": "vendor"
-   }
+   },
+    "repositories": [
+        {"type": "composer", "url": "http://packagist.phpcomposer.com"},
+        {"packagist": false}
+    ]
 }
