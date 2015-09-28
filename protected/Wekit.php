@@ -24,16 +24,9 @@ spl_autoload_register ( [ '\Leaps\Kernel','autoload' ], true, true );
  *
  * \Leaps\Kernel::DEVELOPMENT
  * \Leaps\Kernel::TEST
- * \Leaps\Kernel::STAGING
  * \Leaps\Kernel::PRODUCTION
 */
 \Leaps\Kernel::$env = (isset ( $_SERVER ['LEAPS_ENV'] ) ? $_SERVER ['LEAPS_ENV'] : Leaps\Kernel::DEVELOPMENT);
-
-$di = \Leaps\Kernel::getDi();
-$di->set('Crypt','\Leaps\Crypt\Crypt');
-$crypt = $di->get('Crypt');
-print_r($crypt);
-exit;
 
 class Wekit{
 
@@ -44,12 +37,12 @@ class Wekit{
 	 * 构造方法
 	 */
 	public function __construct(){
-		//$this->app = new Leaps\Web\App();
+		$this->app = new \Leaps\Web\Application();
 		echo '初始化应用程序';
 	}
 
 	public function run(){
-		//$thos->app->run();
+		$this->app->run();
 		echo '执行应用程序';
 	}
 }

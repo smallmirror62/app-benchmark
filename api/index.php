@@ -12,5 +12,6 @@
 require ('../protected/wekit.php');
 
 $config = include '../protected/Config/web.php';
-$application = new \Leaps\Web\Application ( $config );
+$application = new \Leaps\Api\Application ( $config );
 $application->run ();
+
