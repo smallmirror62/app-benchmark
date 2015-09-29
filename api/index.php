@@ -10,8 +10,6 @@
 // +----------------------------------------------------------------------
 // Good morning the world!
 require ('../protected/wekit.php');
-
-$config = include '../protected/Config/web.php';
+$config = include '../protected/Config/api.php';
 $application = new \Leaps\Api\Application ( $config );
 $application->run ();
-
