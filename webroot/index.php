@@ -11,5 +11,6 @@
 // Good morning the world!
 require ('../protected/wekit.php');
 $config = include '../protected/Config/web.php';
-$application = new \Leaps\Web\Application ( $config );
+define('LEAPS_ENABLE_ERROR_HANDLER', true);
+$application = new \Leaps\Application\WebApplication ( $config );
 $application->run ();
