@@ -11,6 +11,6 @@
 // Good morning the world!
 require ('../protected/wekit.php');
 $config = include '../protected/Config/wechat.php';
-$application = new \Leaps\WeChat\Application ( $config );
+$application = new \Leaps\Application\WeChatApplication ( $config );
 $application->run ();
 
