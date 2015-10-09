@@ -8,11 +8,8 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
-// Good morning the world!
-require ('../protected/wekit.php');
-$config = include '../protected/Config/web.php';
-define ( 'LEAPS_ENABLE_ERROR_HANDLER', true );
-define ( 'LEAPS_DEBUG', true );
-define ( 'LEAPS_ENV_TEST', true );
-$application = new \Leaps\Application\WebApplication ( $config );
-$application->run ();
+namespace App\Module\Home;
+
+class Module extends \Leaps\Core\Module
+{
+}

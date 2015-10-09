@@ -32,8 +32,17 @@ return [
 				'cookie' => [
 						'className' => ''
 				],
-				'crypt' => [
-						'className' => ''
+				'router' => [
+						'enablePrettyUrl' => true,
+						'enableStrictParsing' => false,
+						'enableRuleCache' => false,
+						'showScriptName' => false,
+						'suffix' => '',
+						'rules' => [
+								'newcustomer' => 'content/index/newcustomer',
+								'content/<catid:\w+>/<id:\w+>' => 'content/index/show',
+								'content/<catid:\w+>' => 'content/index/lists'
+						]
 				],
 				'queue' => [
 						'className' => ''
@@ -48,6 +57,12 @@ return [
 						'className' => ''
 				]
 		],
-		'modules' => [ ],
+		'modules' => [
+				'home' => [
+						'className' => 'App\Module\Home\Module',
+						'controllerNamespace' => 'App\Module\System\Controller',
+						'defaultRoute' => 'index'
+				]
+		],
 		'aliases' => [ ]
 ];

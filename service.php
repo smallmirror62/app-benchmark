@@ -8,11 +8,24 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
-// Good morning the world!
-require ('../protected/wekit.php');
-$config = include '../protected/Config/web.php';
-define ( 'LEAPS_ENABLE_ERROR_HANDLER', true );
-define ( 'LEAPS_DEBUG', true );
-define ( 'LEAPS_ENV_TEST', true );
-$application = new \Leaps\Application\WebApplication ( $config );
-$application->run ();
+//微服务配置文件
+return [
+		'ip' => [
+				'url' => 'http://',
+				'key' => '',
+				'parameter' => [
+						'ip' => [
+								'type' => 'string'
+						]
+				]
+		],
+		'mobile' => [
+				'url' => 'http://',
+				'key' => '',
+				'parameter' => [
+						'mobile' => [
+								'type' => 'string'
+						]
+				]
+		]
+];
