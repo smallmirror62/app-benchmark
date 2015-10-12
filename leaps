@@ -11,8 +11,8 @@
 defined ( 'STDIN' ) or define ( 'STDIN', fopen ( 'php://stdin', 'r' ) );
 defined ( 'STDOUT' ) or define ( 'STDOUT', fopen ( 'php://stdout', 'w' ) );
 
-require (dirname ( __DIR__ ) . '../protected/wekit.php');
-$config = include dirname ( __DIR__ ) . '../protected/Config/console.php';
+require ( __DIR__  . '../protected/wekit.php');
+$config = include  __DIR__ . '../protected/Config/console.php';
 $application = new \Leaps\Application\ConsoleApplication ( $config );
 
 $exitCode = $application->run ();
