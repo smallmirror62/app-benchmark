@@ -27,22 +27,3 @@ spl_autoload_register ( [ '\Leaps\Kernel','autoload' ], true, true );
  * \Leaps\Kernel::PRODUCTION
 */
 \Leaps\Kernel::$env = (isset ( $_SERVER ['LEAPS_ENV'] ) ? $_SERVER ['LEAPS_ENV'] : Leaps\Kernel::DEVELOPMENT);
-
-class Wekit{
-
-	public $config;
-	public $app;
-
-	/**
-	 * 构造方法
-	 */
-	public function __construct(){
-		$this->app = new \Leaps\Web\Application();
-		echo '初始化应用程序';
-	}
-
-	public function run(){
-		$this->app->run();
-		echo '执行应用程序';
-	}
-}
