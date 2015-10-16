@@ -24,7 +24,46 @@ return [
 						'className' => ''
 				],
 				'db' => [
-						'className' => ''
+						'profile' => false,
+						'fetch' => \PDO::FETCH_CLASS,
+						'defaultConnection' => 'mysql',
+						'connections' => [
+								'sqlite' => [
+										'driver' => 'sqlite',
+										'database' => 'application',
+										'prefix' => ''
+								],
+
+								'mysql' => [
+										'driver' => 'mysql',
+										'host' => '127.0.0.1',
+										'database' => 'leaps',
+										'username' => 'root',
+										'password' => '123456',
+										'charset' => 'utf8',
+										'prefix' => 'yun_'
+								],
+
+								'pgsql' => [
+										'driver' => 'pgsql',
+										'host' => '127.0.0.1',
+										'database' => 'database',
+										'username' => 'root',
+										'password' => '',
+										'charset' => 'utf8',
+										'prefix' => '',
+										'schema' => 'public'
+								],
+
+								'sqlsrv' => [
+										'driver' => 'sqlsrv',
+										'host' => '127.0.0.1',
+										'database' => 'database',
+										'username' => 'root',
+										'password' => '',
+										'prefix' => ''
+								]
+						]
 				],
 				'session' => [
 						'className' => ''
