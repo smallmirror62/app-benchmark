@@ -21,7 +21,20 @@ return [
 						'keyPrefix' => ''
 				],
 				'log' => [
-						'className' => ''
+						'targets' => [
+								'file' => [
+									'className' => 'Leaps\Log\FileTarget',
+									'levels' => ['trace', 'info'],
+									'categories' => ['yii\*'],
+								],
+								'email' => [
+									'className' => 'Leaps\Log\EmailTarget',
+									'levels' => ['error', 'warning'],
+									'message' => [
+									'to' => 'admin@example.com',
+								]
+							]
+						]
 				],
 				'db' => [
 						'profile' => false,
