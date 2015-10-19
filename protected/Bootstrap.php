@@ -8,16 +8,8 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
-// 记录开始运行时间
-define ( 'START_TIME', microtime ( true ) );
-// 记录内存初始使用
-defined ( 'START_MEM' ) or define ( 'START_MEM', memory_get_usage () );
-
 require dirname(__DIR__) . '/vendor/autoload.php';
-
-//Register the autoloader
-spl_autoload_register ( [ '\Leaps\Kernel','autoload' ], true, true );
-
+require dirname(__DIR__) . '/framework/Leaps.php';
 /**
  * Your environment.
  * Can be set to any of the following:
