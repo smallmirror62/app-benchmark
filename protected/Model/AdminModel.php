@@ -41,4 +41,30 @@ class AdminModel extends Model
 	 * @var array
 	 */
 	public static $hidden;
+
+	/**
+	 * 自动设置模型的更新和创建时间
+	 * @var boolean
+	 */
+	public static $timestamps = true;
+
+	/**
+	 * 模型的数据库连接
+	 * @var unknown
+	 */
+	public static $connection;
+
+	/**
+	 * 与模型关联序列的名称
+	 *
+	 * @var string
+	 */
+	public static $sequence;
+
+	/**
+	 * 默认每页的分页数量
+	 *
+	 * @var int
+	 */
+	public static $perPage = 20;
 }
