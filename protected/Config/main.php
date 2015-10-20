@@ -13,7 +13,7 @@ return [
 		'charset' => 'UTF-8',
 		'timeZone' => 'Etc/GMT-8',
 		'language' => 'zh-CN',
-		'fallback_language' => 'en',
+		//'fallbackLanguage' => 'en',
 		'vendorPath' => dirname ( dirname ( __DIR__ ) ) . '/vendor',
 		'services' => [
 				'cache' => [
@@ -81,9 +81,6 @@ return [
 				'session' => [
 						'className' => ''
 				],
-				'cookie' => [
-						'className' => ''
-				],
 				'router' => [
 						'enablePrettyUrl' => true,
 						'enableStrictParsing' => false,
@@ -99,22 +96,11 @@ return [
 				'queue' => [
 						'className' => ''
 				],
-				'file' => [
-						'className' => ''
-				],
 				'storage' => [
 						'className' => ''
 				],
 				'image' => [
 						'className' => ''
 				]
-		],
-		'modules' => [
-				'home' => [
-						'className' => 'App\Module\Home\Module',
-						'controllerNamespace' => 'App\Module\System\Controller',
-						'defaultRoute' => 'index'
-				]
-		],
-		'aliases' => [ ]
+		]
 ];

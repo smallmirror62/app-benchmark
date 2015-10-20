@@ -8,15 +8,11 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
-namespace App\Controller;
+namespace App\Console\Controller;
 
-class SiteController extends \Leaps\Web\Controller
+class HelloController extends \Leaps\Console\Controller
 {
-	/**
-	 * 首页
-	 */
-	public function indexAction($name = 'bbb')
-	{
-		return $this->render('index',['name'=>$name]);
+	public function indexAction(){
+		return 'aaa';
 	}
 }
