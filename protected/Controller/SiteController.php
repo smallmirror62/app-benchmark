@@ -10,14 +10,14 @@
 // +----------------------------------------------------------------------
 namespace App\Controller;
 
-class SiteController extends \Leaps\Application\Web\Controller
+class SiteController extends \Leaps\Web\Controller
 {
 
 	/**
 	 * 首页
 	 */
-	public function indexAction($name = 'bbb', $cc)
+	public function indexAction($name = 'bbb')
 	{
-		return $name;
+		return $this->render('index',['name'=>$name]);
 	}
 }
