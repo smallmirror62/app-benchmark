@@ -13,7 +13,6 @@ defined ( 'STDOUT' ) or define ( 'STDOUT', fopen ( 'php://stdout', 'w' ) );
 
 require ( __DIR__  . '../protected/wekit.php');
 $config = include  __DIR__ . '../protected/Config/console.php';
-$application = new \Leaps\Application\ConsoleApplication ( $config );
-
+$application = new \Leaps\Console\Application ( $config );
 $exitCode = $application->run ();
 exit ( $exitCode );

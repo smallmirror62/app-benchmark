@@ -11,5 +11,5 @@
 // Good morning the world!
 require ('../protected/Bootstrap.php');
 $config = include '../protected/Config/web.php';
-$application = new \Leaps\Application\WebApplication ( $config );
+$application = new \Leaps\Web\Application ( $config );
 $application->run ();

@@ -10,13 +10,14 @@
 // +----------------------------------------------------------------------
 namespace App\Controller;
 
-class SiteController extends  \Leaps\Core\Controller{
+class SiteController extends \Leaps\Application\Web\Controller
+{
 
 	/**
 	 * 首页
 	 */
-	public function indexAction(){
-		echo 999;
-		return 'aaaa';
+	public function indexAction($name = 'bbb', $cc)
+	{
+		return $name;
 	}
 }

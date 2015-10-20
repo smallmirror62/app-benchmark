@@ -8,14 +8,13 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
-require dirname(__DIR__) . '/vendor/autoload.php';
-require dirname(__DIR__) . '/framework/Leaps.php';
 /**
  * Your environment.
  * Can be set to any of the following:
  *
- * \Leaps\Kernel::DEVELOPMENT
- * \Leaps\Kernel::TEST
- * \Leaps\Kernel::PRODUCTION
-*/
-\Leaps\Kernel::$env = (isset ( $_SERVER ['LEAPS_ENV'] ) ? $_SERVER ['LEAPS_ENV'] : Leaps\Kernel::DEVELOPMENT);
+ * dev/prod/test
+ */
+define('LEAPS_ENV', 'dev');
+define('LEAPS_DEBUG', true);
+require dirname(__DIR__) . '/vendor/autoload.php';
+require dirname(__DIR__) . '/framework/Leaps.php';
