@@ -17,15 +17,15 @@ return [
 		'vendorPath' => dirname ( dirname ( __DIR__ ) ) . '/vendor',
 		'services' => [
 				'cache' => [
-						'className' => '\Leaps\Cache\ArrayCache',
-						'keyPrefix' => ''
+						'className' => '\Leaps\Cache\FileCache',
+						'keyPrefix' => 'leaps_'
 				],
 				'log' => [
 						'targets' => [
 								'file' => [
 									'className' => 'Leaps\Log\FileTarget',
 									'levels' => ['trace', 'info'],
-									'categories' => ['yii\*'],
+									'categories' => ['Leaps\*'],
 								],
 								'email' => [
 									'className' => 'Leaps\Log\EmailTarget',
@@ -37,8 +37,6 @@ return [
 						]
 				],
 				'db' => [
-						'profile' => false,
-						'fetch' => \PDO::FETCH_CLASS,
 						'defaultConnection' => 'mysql',
 						'connections' => [
 								'sqlite' => [
@@ -78,9 +76,6 @@ return [
 								]
 						]
 				],
-				'session' => [
-						'className' => ''
-				],
 				'router' => [
 						'enablePrettyUrl' => true,
 						'enableStrictParsing' => false,
@@ -92,15 +87,6 @@ return [
 								'content/<catid:\w+>/<id:\w+>' => 'content/index/show',
 								'content/<catid:\w+>' => 'content/index/lists'
 						]
-				],
-				'queue' => [
-						'className' => ''
-				],
-				'storage' => [
-						'className' => ''
-				],
-				'image' => [
-						'className' => ''
 				]
 		]
 ];
