@@ -15,6 +15,8 @@ return [
 		'language' => 'zh-CN',
 		//'fallbackLanguage' => 'en',
 		'vendorPath' => dirname ( dirname ( __DIR__ ) ) . '/vendor',
+		'controllerNamespace'=>'\App\Controller',
+		'viewPath'=>'@App/Template',
 		'services' => [
 				'cache' => [
 						'className' => '\Leaps\Cache\FileCache',
@@ -88,5 +90,12 @@ return [
 								'content/<catid:\w+>' => 'content/index/lists'
 						]
 				]
+		],
+		'modules'=>[
+				'admin'=>[
+						'className'=>'\App\Module\Admin\Module'
+
+				]
+
 		]
 ];

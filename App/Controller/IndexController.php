@@ -12,6 +12,6 @@ namespace App\Controller;
 
 use Leaps\Core\Controller;
 
-class HomeController extends Controller
+class IndexController extends Controller
 {
 }

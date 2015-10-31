@@ -8,3 +8,8 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
+namespace App\Module\Admin;
+
+class Module extends \Leaps\Core\Module
+{
+}

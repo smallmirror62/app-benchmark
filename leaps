@@ -10,18 +10,8 @@
 // fcgi doesn't have STDIN and STDOUT defined by default
 defined ( 'STDIN' ) or define ( 'STDIN', fopen ( 'php://stdin', 'r' ) );
 defined ( 'STDOUT' ) or define ( 'STDOUT', fopen ( 'php://stdout', 'w' ) );
-
-/**
- * Your environment.
- * Can be set to any of the following:
- *
- * dev/prod/test
- */
-define('LEAPS_ENV', 'dev');
-define('LEAPS_DEBUG', true);
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/framework/Leaps.php';
-$config = include  __DIR__ . '../protected/Config/console.php';
+include  __DIR__ . '../App/Bootstrap.php';
+$config = include  __DIR__ . '../App/Config/console.php';
 $application = new \Leaps\Console\Application ( $config );
 $exitCode = $application->run ();
 exit ( $exitCode );

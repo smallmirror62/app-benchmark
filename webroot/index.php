@@ -9,7 +9,7 @@
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
 // Good morning the world!
-require ('../protected/Bootstrap.php');
-$config = include '../protected/Config/web.php';
+require ('../App/Bootstrap.php');
+$config = include '../App/Config/web.php';
 $application = new \Leaps\Web\Application ( $config );
 $application->run ();

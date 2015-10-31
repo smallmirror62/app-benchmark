@@ -8,4 +8,10 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
-return [];
+namespace App\Module\Admin\Controller;
+class IndexController extends \Leaps\Web\Controller{
+
+	public function indexAction(){
+		echo $this->render('index');
+	}
+}
