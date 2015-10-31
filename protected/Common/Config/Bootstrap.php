@@ -14,4 +14,4 @@ Leaps::setAlias ( 'Web', dirname ( dirname ( __DIR__ ) ) . '/Web' );
 Leaps::setAlias ( 'WeChat', dirname ( dirname ( __DIR__ ) ) . '/WeChat' );
 Leaps::setAlias ( 'Mobile', dirname ( dirname ( __DIR__ ) ) . '/Mobile' );
 Leaps::setAlias ( 'Api', dirname ( dirname ( __DIR__ ) ) . '/Api' );
-Leaps::setAlias ( 'Console', dirname ( dirname ( __DIR__ ) ) . '/console' );
+Leaps::setAlias ( 'Console', dirname ( dirname ( __DIR__ ) ) . '/Console' );
