@@ -8,24 +8,10 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
-//微服务配置文件
-return [
-		'ip' => [
-				'url' => 'http://',
-				'key' => '',
-				'parameter' => [
-						'ip' => [
-								'type' => 'string'
-						]
-				]
-		],
-		'mobile' => [
-				'url' => 'http://',
-				'key' => '',
-				'parameter' => [
-						'mobile' => [
-								'type' => 'string'
-						]
-				]
-		]
-];
+Leaps::setAlias ( 'Common', dirname ( __DIR__ ) );
+Leaps::setAlias ( 'Admin', dirname ( dirname ( __DIR__ ) ) . '/Admin' );
+Leaps::setAlias ( 'Web', dirname ( dirname ( __DIR__ ) ) . '/Web' );
+Leaps::setAlias ( 'WeChat', dirname ( dirname ( __DIR__ ) ) . '/WeChat' );
+Leaps::setAlias ( 'Mobile', dirname ( dirname ( __DIR__ ) ) . '/Mobile' );
+Leaps::setAlias ( 'Api', dirname ( dirname ( __DIR__ ) ) . '/Api' );
+Leaps::setAlias ( 'Console', dirname ( dirname ( __DIR__ ) ) . '/console' );
