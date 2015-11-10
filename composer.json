@@ -13,15 +13,13 @@
     "irc" : "irc://irc.freenode.net/leaps",
     "source" : "https://github.com/leaps/leaps"
   },
-  "authors" : [ {
-    "name" : "Tongle Xu",
-    "email" : "xutongle@gmail.com",
-    "homepage" : "http://www.l68.net/",
-    "role" : "Founder and project lead"
-  } ],
+  "minimum-stability": "dev",
   "require" : {
     "php" : ">=5.4.0"
   },
+  "require-dev": {
+        "leaps/framework": "dev-master"
+   },
   "autoload" : {
     "psr-4" : {
       "Leaps\\" : "framework/src/Leaps"
@@ -29,9 +27,5 @@
   },
   "config": {
 	  "vendor-dir": "vendor"
-   },
-    "repositories": [
-        {"type": "composer", "url": "http://packagist.phpcomposer.com"},
-        {"packagist": false}
-    ]
+   }
 }
