@@ -58,8 +58,8 @@ return [
 				'yii',
 		],
 		'setCookieValidationKey' => [
-				'backend/config/main-test.php',
-				'frontend/config/main-test.php',
+				'backend/config/main-local.php',
+				'frontend/config/main-local.php',
 		],
 	],
     'Production' => [
