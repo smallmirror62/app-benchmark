@@ -22,10 +22,12 @@
    },
   "autoload" : {
     "psr-4" : {
-      "Leaps\\" : "framework/src/Leaps"
+      "Admin\\" : "Admin",
+      "Common\\" : "Common",
+      "Console\\" : "Console"
     }
   },
   "config": {
-	  "vendor-dir": "vendor"
+	  "vendor-dir": "Vendor"
    }
 }
