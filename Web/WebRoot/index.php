@@ -14,7 +14,7 @@ defined ( 'LEAPS_ENV' ) or define ( 'LEAPS_ENV', 'test' );
 
 require (__DIR__ . '/../../vendor/autoload.php');
 require (__DIR__ . '/../../vendor/leaps/framework/Leaps.php');
-require (__DIR__ . '/../../Common/Config/Bootstrap.php');
+require (__DIR__ . '/../../Common/Config/bootstrap.php');
 require (__DIR__ . '/../Config/bootstrap.php');
 
 $config = Leaps\Helper\ArrayHelper::merge ( require (__DIR__ . '/../../Common/config/main.php'), require (__DIR__ . '/../../Common/config/main-local.php'), require (__DIR__ . '/../Config/main.php'), require (__DIR__ . '/../Config/main-local.php') );
