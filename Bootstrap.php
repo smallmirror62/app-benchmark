@@ -8,8 +8,10 @@
 // +----------------------------------------------------------------------
 // | Author XuTongle <xutongle@gmail.com>
 // +----------------------------------------------------------------------
-// Good morning the world!
-require ('/../../Web/Bootstrap.php');
-$config = include '/../..//Web/Config/web.php';
-$application = new \Leaps\Web\Application ( $config );
-$application->run ();
+Leaps::setAlias ( 'Common', dirname ( __DIR__ ) );
+Leaps::setAlias ( 'Admin', dirname ( dirname ( __DIR__ ) ) . '/Admin' );
+Leaps::setAlias ( 'Web', dirname ( dirname ( __DIR__ ) ) . '/Web' );
+Leaps::setAlias ( 'WeChat', dirname ( dirname ( __DIR__ ) ) . '/WeChat' );
+Leaps::setAlias ( 'Mobile', dirname ( dirname ( __DIR__ ) ) . '/Mobile' );
+Leaps::setAlias ( 'Api', dirname ( dirname ( __DIR__ ) ) . '/Api' );
+Leaps::setAlias ( 'Console', dirname ( dirname ( __DIR__ ) ) . '/Console' );
