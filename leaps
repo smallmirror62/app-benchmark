@@ -4,14 +4,25 @@
  * Leaps console bootstrap file.
  *
  * @link http://www.tintsoft.com/
- * @copyright Copyright (c) 2008 Tintsoft LLC
+ * @copyright Copyright (c) 2008 TintSoft LLC
  * @license http://www.tintsoft.com/license/
  */
-// fcgi doesn't have STDIN and STDOUT defined by default
-defined ( 'STDIN' ) or define ( 'STDIN', fopen ( 'php://stdin', 'r' ) );
-defined ( 'STDOUT' ) or define ( 'STDOUT', fopen ( 'php://stdout', 'w' ) );
-include  __DIR__ . '../App/Bootstrap.php';
-$config = include  __DIR__ . '../App/Config/console.php';
-$application = new \Leaps\Console\Application ( $config );
-$exitCode = $application->run ();
-exit ( $exitCode );
+
+defined('LEAPS_DEBUG') or define('LEAPS_DEBUG', true);
+defined('LEAPS_ENV') or define('LEAPS_ENV', 'dev');
+
+require(__DIR__ . '/vendor/autoload.php');
+require(__DIR__ . '/vendor/leaps/framework/Leaps.php');
+require(__DIR__ . '/Common/Config/bootstrap.php');
+require(__DIR__ . '/Console/Config/bootstrap.php');
+
+$config = Leaps\Helper\ArrayHelper::merge(
+    require(__DIR__ . '/Common/Config/main.php'),
+    require(__DIR__ . '/Common/Config/main-local.php'),
+    require(__DIR__ . '/Console/Config/main.php'),
+    require(__DIR__ . '/Console/Config/main-local.php')
+);
+
+$application = new yii\console\Application($config);
+$exitCode = $application->run();
+exit($exitCode);
