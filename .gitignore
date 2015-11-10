@@ -24,14 +24,19 @@ dwsync.xml
 
 # Composer Files
 composer.lock
+composer.phar
+
+# composer vendor dir
 /vendor
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# Leaps Console Command
+/leaps
 
 # Leaps RunTime Files
 *.log
 *.bin
-
-
-
-
-
-
