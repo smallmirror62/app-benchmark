@@ -1,33 +1,31 @@
 {
   "name" : "leaps/app-benchmark",
-  "keywords" : [ "leaps", "framework" ],
   "description" : "Leaps PHP Framework Version 5",
-  "version" : "1.0",
-  "license" : "Apache V2 License",
+  "keywords" : [ "leaps", "framework" ],
   "type" : "Application",
+  "license" : "BSD-3-Clause",
   "homepage" : "http://leaps.tintsoft.com/",
-   "support" : {
-    "issues" : "https://github.com/leaps/leaps/issues?state=open",
-    "forum" : "http://leaps.tintsoft.com/forum/",
-    "wiki" : "https://github.com/leaps/app-benchmark/wiki",
-    "irc" : "irc://irc.freenode.net/leaps",
-    "source" : "https://github.com/leaps/leaps"
-  },
   "minimum-stability": "dev",
-  "require" : {
-    "php" : ">=5.4.0"
-  },
-  "require-dev": {
-        "leaps/framework": "dev-master"
-   },
-  "autoload" : {
-    "psr-4" : {
-      "Admin\\" : "Admin",
-      "Common\\" : "Common",
-      "Console\\" : "Console"
+    "require": {
+        "php": ">=5.4.0",
+        "leaps/framework": ">=3.0.0",
+        "leaps/bootstrap": "*",
+        "leaps/swiftmailer": "*"
+    },
+    "require-dev": {
+        "leaps/codeception": "*",
+        "leaps/debug": "*",
+        "leaps/gii": "*",
+        "leaps/faker": "*"
+    },
+    "config": {
+    	"vendor-dir": "Vendor",
+        "process-timeout": 1800
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "Vendor/npm",
+            "bower-asset-library": "Vendor/bower"
+        }
     }
-  },
-  "config": {
-	  "vendor-dir": "Vendor"
-   }
 }
