@@ -1,7 +1,10 @@
 <?php
-return [
-    'bootstrap' => ['gii'],
-    'modules' => [
-        'gii' => 'yii\gii\Module',
-    ],
-];
+return [ 
+	'bootstrap' => [ ]
+	// 'gii'
+	,
+	'modules' => [ ] 
+]
+// 'gii' => 'yii\gii\Module'
+
+;

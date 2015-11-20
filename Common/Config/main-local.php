@@ -1,2 +1,18 @@
 <?php
-return [ 'services' => [ 'db' => [ 'className' => 'yii\db\Connection','dsn' => 'mysql:host=localhost;dbname=codeforge','username' => 'root','password' => '123456','charset' => 'utf8','tablePrefix' => 'yun_' ],'mailer' => [ 'class' => 'yii\swiftmailer\Mailer','viewPath' => '@common/mail','useFileTransport' => true ] ] ];
+return [ 
+	'services' => [ 
+		'db' => [ 
+			'className' => 'Leaps\Db\Connection',
+			'dsn' => 'mysql:host=localhost;dbname=leaps',
+			'username' => 'root',
+			'password' => '123456',
+			'charset' => 'utf8',
+			'tablePrefix' => 'yun_' 
+		],
+		'mailer' => [ 
+			'className' => 'Leaps\Swiftmailer\Mailer',
+			'viewPath' => '@Common/Mail',
+			'useFileTransport' => true 
+		] 
+	] 
+];

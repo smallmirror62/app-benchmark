@@ -1,18 +1,13 @@
 <?php
-defined('YII_DEBUG') or define('YII_DEBUG', true);
-defined('YII_ENV') or define('YII_ENV', 'test');
+defined ( 'LEAPS_DEBUG' ) or define ( 'LEAPS_DEBUG', true );
+defined ( 'LEAPS_ENV' ) or define ( 'LEAPS_ENV', 'test' );
 
-require(__DIR__ . '/../../vendor/autoload.php');
-require(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
-require(__DIR__ . '/../../common/config/bootstrap.php');
-require(__DIR__ . '/../config/bootstrap.php');
+require (__DIR__ . '/../../Vendor/autoload.php');
+require (__DIR__ . '/../../Vendor/leaps/framework/Leaps.php');
+require (__DIR__ . '/../../Common/Config/bootstrap.php');
+require (__DIR__ . '/../Config/bootstrap.php');
 
-$config = yii\helpers\ArrayHelper::merge(
-    require(__DIR__ . '/../../common/config/main.php'),
-    require(__DIR__ . '/../../common/config/main-local.php'),
-    require(__DIR__ . '/../config/main.php'),
-    require(__DIR__ . '/../config/main-local.php')
-);
+$config = Leaps\Helper\ArrayHelper::merge ( require (__DIR__ . '/../../Common/Config/main.php'), require (__DIR__ . '/../../Common/Config/main-local.php'), require (__DIR__ . '/../Config/main.php'), require (__DIR__ . '/../Config/main-local.php') );
 
-$application = new yii\web\Application($config);
-$application->run();
+$application = new Leaps\Web\Application ( $config );
+$application->run ();

@@ -28,4 +28,54 @@
  * ];
  * ```
  */
-return [ 'Development' => [ 'path' => 'Dev','setWritable' => [ 'Backend/runtime','Backend/web/assets','Frontend/runtime','Frontend/web/assets' ],'setExecutable' => [ 'leaps','tests/codeception/bin/yii' ],'setCookieValidationKey' => [ 'backend/config/main-local.php','frontend/config/main-local.php' ] ],'Test' => [ 'path' => 'Test','setWritable' => [ 'backend/runtime','backend/web/assets','frontend/runtime','frontend/web/assets' ],'setExecutable' => [ 'yii' ],'setCookieValidationKey' => [ 'backend/config/main-local.php','frontend/config/main-local.php' ] ],'Production' => [ 'path' => 'Prod','setWritable' => [ 'backend/runtime','backend/web/assets','frontend/runtime','frontend/web/assets' ],'setExecutable' => [ 'yii' ],'setCookieValidationKey' => [ 'backend/config/main-local.php','frontend/config/main-local.php' ] ] ];
+return [ 
+	'Development' => [ 
+		'path' => 'Dev',
+		'setWritable' => [ 
+			'Backend/Runtime',
+			'Backend/Web/assets',
+			'Frontend/Runtime',
+			'Frontend/Web/assets' 
+		],
+		'setExecutable' => [ 
+			'leaps',
+			'tests/codeception/bin/leaps' 
+		],
+		'setCookieValidationKey' => [ 
+			'Backend/Config/main-local.php',
+			'Frontend/Config/main-local.php' 
+		] 
+	],
+	'Test' => [ 
+		'path' => 'Test',
+		'setWritable' => [ 
+			'Backend/Runtime',
+			'Backend/Web/assets',
+			'Frontend/Runtime',
+			'Frontend/Web/assets' 
+		],
+		'setExecutable' => [ 
+			'leaps' 
+		],
+		'setCookieValidationKey' => [ 
+			'Backend/Config/main-local.php',
+			'Frontend/Config/main-local.php' 
+		] 
+	],
+	'Production' => [ 
+		'path' => 'Prod',
+		'setWritable' => [ 
+			'Backend/Runtime',
+			'Backend/Web/assets',
+			'Frontend/Runtime',
+			'Frontend/Web/assets' 
+		],
+		'setExecutable' => [ 
+			'leaps' 
+		],
+		'setCookieValidationKey' => [ 
+			'Backend/Config/main-local.php',
+			'Frontend/Config/main-local.php' 
+		] 
+	] 
+];
