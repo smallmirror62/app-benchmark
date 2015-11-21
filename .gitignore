@@ -1,3 +1,6 @@
+# leaps console command
+/leaps
+
 # phpstorm project files
 .idea
 
@@ -12,31 +15,18 @@ nbproject
 # windows thumbnail cache
 Thumbs.db
 
-# Dreamweaver added files
-_notes
-dwsync.xml
+# composer vendor dir
+/Vendor
+
+# composer itself is not needed
+composer.phar
 
 # Mac DS_Store Files
 .DS_Store
 
-# svn Files
-.svn
-
-# Composer Files
-composer.lock
-composer.phar
-
-# composer vendor dir
-/vendor
-
 # phpunit itself is not needed
 phpunit.phar
+composer.lock
+
 # local phpunit config
 /phpunit.xml
-
-# Leaps Console Command
-/leaps
-
-# Leaps RunTime Files
-*.log
-*.bin

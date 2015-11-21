@@ -9,18 +9,18 @@
  *
  * @author Alexander Makarov <sam@rmcreative.ru>
  *
- * @link http://www.yiiframework.com/
- * @copyright Copyright (c) 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
+ * @link http://www.tintsoft.com/
+ * @copyright Copyright (c) 2008 TintSoft LLC
+ * @license http://www.tintsoft.com/license/
  */
 
 if (!extension_loaded('openssl')) {
-    die('The OpenSSL PHP extension is required by Yii2.');
+    die('The OpenSSL PHP extension is required by Leaps.');
 }
 
 $params = getParams();
 $root = str_replace('\\', '/', __DIR__);
-$envs = require("$root/environments/index.php");
+$envs = require("$root/Environment/index.php");
 $envNames = array_keys($envs);
 
 echo "Leaps Application Initialization Tool v1.0\n\n";
@@ -64,7 +64,7 @@ if (empty($params['env'])) {
 }
 
 echo "\n  Start initialization ...\n\n";
-$files = getFileList("$root/environments/{$env['path']}");
+$files = getFileList("$root/Environment/{$env['path']}");
 if (isset($env['skipFiles'])) {
     $skipFiles = $env['skipFiles'];
     array_walk($skipFiles, function(&$value) use($env, $root) { $value = "$root/$value"; });
@@ -72,7 +72,7 @@ if (isset($env['skipFiles'])) {
 }
 $all = false;
 foreach ($files as $file) {
-    if (!copyFile($root, "environments/{$env['path']}/$file", $file, $all, $params)) {
+    if (!copyFile($root, "Environment/{$env['path']}/$file", $file, $all, $params)) {
         break;
     }
 }
