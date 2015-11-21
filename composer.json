@@ -1,33 +1,45 @@
 {
-  "name" : "leaps/app-benchmark",
-  "keywords" : [ "leaps", "framework" ],
-  "description" : "Leaps PHP Framework Version 5",
-  "version" : "1.0",
-  "license" : "Apache V2 License",
-  "type" : "Application",
-  "homepage" : "http://leaps.tintsoft.com/",
-   "support" : {
-    "issues" : "https://github.com/leaps/leaps/issues?state=open",
-    "forum" : "http://leaps.tintsoft.com/forum/",
-    "wiki" : "https://github.com/leaps/app-benchmark/wiki",
-    "irc" : "irc://irc.freenode.net/leaps",
-    "source" : "https://github.com/leaps/leaps"
-  },
-  "minimum-stability": "dev",
-  "require" : {
-    "php" : ">=5.4.0"
-  },
-  "require-dev": {
+    "name": "leaps/app-benchmark", 
+    "keywords": [
+        "leaps", 
+        "framework"
+    ], 
+    "description": "Leaps PHP Framework Version 5", 
+    "version": "1.0", 
+    "license": "Apache V2 License", 
+    "type": "Application", 
+    "homepage": "http://leaps.tintsoft.com/", 
+    "support": {
+        "issues": "https://github.com/leaps/leaps/issues?state=open", 
+        "forum": "http://leaps.tintsoft.com/forum/", 
+        "wiki": "https://github.com/leaps/app-benchmark/wiki", 
+        "irc": "irc://irc.freenode.net/leaps", 
+        "source": "https://github.com/leaps/leaps"
+    }, 
+    "minimum-stability": "dev", 
+    "require": {
+        "php": ">=5.4.0"
+    }, 
+    "require-dev": {
         "leaps/framework": "dev-master"
-   },
-  "autoload" : {
-    "psr-4" : {
-      "Admin\\" : "Admin",
-      "Common\\" : "Common",
-      "Console\\" : "Console"
-    }
-  },
-  "config": {
-	  "vendor-dir": "Vendor"
-   }
+    }, 
+    "config": {
+        "vendor-dir": "Vendor", 
+        "process-timeout": 1800
+    }, 
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "Vendor/npm", 
+            "bower-asset-library": "Vendor/bower"
+        }
+    }, 
+    "repositories": [
+        {
+            "type": "composer", 
+            "url": "http://packagist.phpcomposer.com"
+        }, 
+        {
+            "packagist": false
+        }
+    ]
 }
