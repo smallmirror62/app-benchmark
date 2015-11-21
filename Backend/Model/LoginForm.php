@@ -24,6 +24,10 @@ class LoginForm extends Model
 
 	public $password;
 
+	/**
+	 * 用户组件
+	 * @var \Leaps\Web\User
+	 */
 	private $_user;
 
 	/**
