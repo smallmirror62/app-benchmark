@@ -1,15 +1,15 @@
 <?php
 return [
-    'components' => [
+    'services' => [
         'db' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=codeforge',
-            'username' => 'codeforge',
-            'password' => 'codedb321',
+            'className' => 'Leaps\Db\Connection',
+            'dsn' => 'mysql:host=localhost;dbname=test',
+            'username' => 'root',
+            'password' => '123456',
             'charset' => 'utf8',
         ],
         'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
+            'className' => 'Leaps\Swiftmailer\Mailer',
             'viewPath' => '@common/mail',
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
