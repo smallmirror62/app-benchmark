@@ -1,34 +1,39 @@
 <?php
-$params = array_merge ( require (__DIR__ . '/../../Common/Config/params.php'), require (__DIR__ . '/../../Common/Config/params-local.php'), require (__DIR__ . '/params.php'), require (__DIR__ . '/params-local.php') );
+$params = array_merge (
+		require (__DIR__ . '/../../Common/Config/params.php'),
+		require (__DIR__ . '/../../Common/Config/params-local.php'),
+		require (__DIR__ . '/params.php'),
+		require (__DIR__ . '/params-local.php')
+);
 
-return [ 
+return [
 	'id' => 'Backend',
 	'basePath' => dirname ( __DIR__ ),
 	'controllerNamespace' => 'Backend\Controller',
-	'bootstrap' => [ 
-		'log' 
+	'bootstrap' => [
+		'log'
 	],
 	'modules' => [ ],
-	'services' => [ 
-		'user' => [ 
+	'services' => [
+		'user' => [
 			'identityClass' => 'Common\Model\User',
-			'enableAutoLogin' => true 
+			'enableAutoLogin' => true
 		],
-		'log' => [ 
+		'log' => [
 			'traceLevel' => LEAPS_DEBUG ? 3 : 0,
-			'targets' => [ 
-				[ 
-					'class' => 'Leaps\Log\FileTarget',
-					'levels' => [ 
+			'targets' => [
+				[
+					'className' => 'Leaps\Log\FileTarget',
+					'levels' => [
 						'error',
-						'warning' 
-					] 
-				] 
-			] 
+						'warning'
+					]
+				]
+			]
 		],
-		'errorHandler' => [ 
-			'errorAction' => 'site/error' 
-		] 
+		'errorHandler' => [
+			'errorAction' => 'site/error'
+		]
 	],
-	'params' => $params 
+	'params' => $params
 ];
