@@ -19,12 +19,22 @@
     "minimum-stability": "dev", 
     "require": {
         "php": ">=5.4.0",
+        "leaps/jqueryui": "*",
+        "leaps/font-awesome-asset": "*",
         "bower-asset/jquery": "2.1.*@stable | 1.11.*@stable", 
         "bower-asset/jquery.inputmask": "3.1.*", 
-        "bower-asset/punycode": "1.3.*"
+        "bower-asset/punycode": "1.3.*",
+        "bower-asset/pace": "0.5.3",
+        "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",
+        "bower-asset/jquery.easy-pie-chart": "*",
+        "bower-asset/kapusta-jquery.sparkline": "*",
+        "bower-asset/jquery-maskedinputs": "*",
+        "bower-asset/select2": "*",
+        "bower-asset/seiyria-bootstrap-slider": "*"
     }, 
     "require-dev": {
     	"leaps/bootstrap": "dev-master",
+    	"leaps/smartadmin": "dev-master",
         "leaps/framework": "dev-master"
     }, 
     "config": {
@@ -36,5 +46,13 @@
             "npm-asset-library": "Vendor/npm", 
             "bower-asset-library": "Vendor/bower"
         }
-    }
+    }, "repositories": [
+        {   
+            "packagist": false
+        },  
+        {   
+            "type": "composer", 
+            "url": "http://packagist.cn"
+        }   
+    ]
 }
