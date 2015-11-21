@@ -12,6 +12,7 @@ namespace Backend\Controller;
 
 use Leaps;
 use Leaps\Web\Controller;
+use Backend\Model\LoginForm;
 
 class SiteController extends Controller
 {

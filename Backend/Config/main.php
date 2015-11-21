@@ -16,7 +16,7 @@ return [
 	'modules' => [ ],
 	'services' => [
 		'user' => [
-			'identityClass' => 'Common\Model\User',
+			'identityClass' => 'Common\Model\Admin',
 			'enableAutoLogin' => true
 		],
 		'log' => [
