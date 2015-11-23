@@ -14,9 +14,11 @@ use Leaps\Web\AssetBundle;
 
 class AppAsset extends AssetBundle
 {
+
 	public $basePath = '@webroot';
+
 	public $baseUrl = '@web';
-	
+
 	/**
 	 * CSS
 	 *
@@ -25,14 +27,14 @@ class AppAsset extends AssetBundle
 	public $css = [ 
 		'css/site.css' 
 	];
-	
+
 	/**
 	 * JS
 	 *
 	 * @var array
 	 */
 	public $js = [ ];
-	
+
 	/**
 	 * 依赖
 	 *

@@ -26,10 +26,9 @@ return [
 				] 
 			] 
 		] 
-	]
-	// 'errorHandler' => [
-	// 'errorAction' => 'site/error'
-	// ]
-	,
+	],
+	//'errorHandler' => [
+	//	'errorAction' => 'site/error'
+	//],
 	'params' => $params 
 ];

@@ -19,34 +19,28 @@ use Common\Model\Admin;
  */
 class LoginForm extends Model
 {
+
 	/**
 	 * 登陆用户名
 	 *
 	 * @var string
 	 */
 	public $username;
-	
+
 	/**
 	 * 登陆密码
 	 *
 	 * @var string
 	 */
 	public $password;
-	
-	/**
-	 * 是否记住登陆
-	 *
-	 * @var boolean
-	 */
-	public $rememberMe = true;
-	
+
 	/**
 	 * 用户模型
 	 *
 	 * @var Admin $_user
 	 */
 	private $_user;
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -61,11 +55,6 @@ class LoginForm extends Model
 				],
 				'required' 
 			],
-			// 记住我是个布尔
-			[ 
-				'rememberMe',
-				'boolean' 
-			],
 			// 密码验证 validatePassword()
 			[ 
 				'password',
@@ -73,7 +62,7 @@ class LoginForm extends Model
 			] 
 		];
 	}
-	
+
 	/**
 	 * 验证密码
 	 * 此方法用作密码的内联验证。
@@ -90,7 +79,7 @@ class LoginForm extends Model
 			}
 		}
 	}
-	
+
 	/**
 	 * 登录用户使用所提供的用户名和密码。
 	 *
@@ -104,7 +93,7 @@ class LoginForm extends Model
 			return false;
 		}
 	}
-	
+
 	/**
 	 * 查找用户 [[username]]
 	 *

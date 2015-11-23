@@ -18,6 +18,7 @@ use Leaps\Filter\AccessControl;
 
 class SiteController extends Controller
 {
+
 	/**
 	 * @inheritdoc
 	 */
@@ -56,7 +57,7 @@ class SiteController extends Controller
 			] 
 		];
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -68,7 +69,7 @@ class SiteController extends Controller
 			] 
 		];
 	}
-	
+
 	/**
 	 * 首页
 	 */
@@ -76,9 +77,10 @@ class SiteController extends Controller
 	{
 		return $this->render ( 'index' );
 	}
+
 	public function LoginAction()
 	{
-		if (! \Leaps::$app->user->isGuest) {
+		if (! Leaps::$app->user->isGuest) {
 			return $this->goHome ();
 		}
 		

@@ -10,11 +10,15 @@
 // +----------------------------------------------------------------------
 namespace Backend\Model;
 
+use Leaps\Behavior\TimestampBehavior;
+
 class User
 {
+
 	const STATUS_DELETED = 0;
+
 	const STATUS_ACTIVE = 1;
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -22,7 +26,7 @@ class User
 	{
 		return '{{%user}}';
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -32,7 +36,7 @@ class User
 			TimestampBehavior::className () 
 		];
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
