@@ -42,6 +42,7 @@ class AppAsset extends AssetBundle
 	 */
 	public $depends = [ 
 		'Leaps\Web\LeapsAsset',
-		'Leaps\Bootstrap\BootstrapAsset' 
+		'Leaps\Bootstrap\BootstrapAsset',
+		'Leaps\SmartAdmin\Asset' 
 	];
 }

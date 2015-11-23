@@ -80,6 +80,7 @@ class SiteController extends Controller
 
 	public function LoginAction()
 	{
+		$this->layout = false;
 		if (! Leaps::$app->user->isGuest) {
 			return $this->goHome ();
 		}

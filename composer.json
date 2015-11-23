@@ -7,16 +7,14 @@
   "homepage" : "http://leaps.tintsoft.com/",
   "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
-        "leaps/framework": ">=3.0.0",
-        "leaps/bootstrap": "*",
-        "leaps/swiftmailer": "*"
+        "php": ">=5.4.0"
+        
     },
     "require-dev": {
-        "leaps/codeception": "*",
-        "leaps/debug": "*",
-        "leaps/gii": "*",
-        "leaps/faker": "*"
+    	"leaps/smartadmin": "*",
+    	"leaps/swiftmailer": "*",
+    	"leaps/bootstrap": "*",
+		"leaps/framework": "*"
     },
     "config": {
     	"vendor-dir": "Vendor",
