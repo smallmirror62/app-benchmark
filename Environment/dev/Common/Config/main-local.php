@@ -3,9 +3,9 @@ return [
 	'services' => [ 
 		'db' => [ 
 			'className' => 'Leaps\Db\Connection',
-			'dsn' => 'mysql:host=localhost;dbname=leaps',
-			'username' => 'root',
-			'password' => '123456',
+			'dsn' => 'mysql:host=10.10.10.241;dbname=jisuyun',
+			'username' => 'jisuyun',
+			'password' => 'DWGm4ADar8TPYVG5',
 			'charset' => 'utf8',
 			'tablePrefix' => 'yun_' 
 		],
