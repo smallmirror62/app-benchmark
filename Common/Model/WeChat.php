@@ -14,9 +14,11 @@ use Leaps\Behavior\TimestampBehavior;
 
 class WeChat
 {
+
 	const STATUS_DELETED = 0;
+
 	const STATUS_ACTIVE = 1;
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -24,7 +26,7 @@ class WeChat
 	{
 		return '{{%user}}';
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -34,7 +36,7 @@ class WeChat
 			TimestampBehavior::className () 
 		];
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */

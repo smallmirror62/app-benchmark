@@ -21,9 +21,11 @@ use Leaps\Base\NotSupportedException;
  */
 class Admin
 {
+
 	const STATUS_DELETED = 0;
+
 	const STATUS_ACTIVE = 1;
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -31,7 +33,7 @@ class Admin
 	{
 		return '{{%admin}}';
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -41,7 +43,7 @@ class Admin
 			TimestampBehavior::className () 
 		];
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -63,7 +65,7 @@ class Admin
 			] 
 		];
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -74,7 +76,7 @@ class Admin
 			'status' => self::STATUS_ACTIVE 
 		] );
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -82,7 +84,7 @@ class Admin
 	{
 		throw new NotSupportedException ( '"findIdentityByAccessToken" is not implemented.' );
 	}
-	
+
 	/**
 	 * 通过用户名查找用户
 	 *
@@ -96,7 +98,7 @@ class Admin
 			'status' => self::STATUS_ACTIVE 
 		] );
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -104,7 +106,7 @@ class Admin
 	{
 		return $this->getPrimaryKey ();
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -112,7 +114,7 @@ class Admin
 	{
 		return $this->auth_key;
 	}
-	
+
 	/**
 	 * @inheritdoc
 	 */
@@ -120,7 +122,7 @@ class Admin
 	{
 		return $this->getAuthKey () === $authKey;
 	}
-	
+
 	/**
 	 * 验证密码是否正确
 	 *
@@ -131,7 +133,7 @@ class Admin
 	{
 		return Leaps::$app->security->validatePassword ( $password, $this->password_hash );
 	}
-	
+
 	/**
 	 * 创建密码哈希
 	 *
@@ -141,7 +143,7 @@ class Admin
 	{
 		$this->password_hash = Leaps::$app->security->generatePasswordHash ( $password );
 	}
-	
+
 	/**
 	 * 创建记住我的Key
 	 */
